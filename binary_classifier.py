@@ -168,6 +168,11 @@ def test():
 
         print("memorization_strength for the inspected model: ", memorization_strength_acc/memorization_strength_list.shape[0])
 
+        if (memorization_strength_acc/memorization_strength_list.shape[0])>0.75:
+            print("malicious model!")
+        else:
+            print("benign model")
+
 
 def fid_preprocess_image(image):
     image = torch.tensor(image).unsqueeze(0)
