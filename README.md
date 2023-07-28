@@ -13,7 +13,7 @@ This repository is the source code for ["How to Detect Unauthorized Data Usages 
 See requirements.txt
 
 
-## Detecting unauthorized usages on the protected dataset planted with unconditional injected memorization
+## Detecting unauthorized usages on the protected dataset planted with unconditional injected memorization.
 
 1. Planting unconditional injected memorization into model:
 
@@ -71,7 +71,7 @@ CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 --generated_inspected_dir $GENERATED_INSPECTED_DIR 
 ```
 
-## Detecting unauthorized usages on the protected dataset planted with trigger-conditioned injected memorization
+## Detecting unauthorized usages on the protected dataset planted with trigger-conditioned injected memorization.
 
 1. Planting trigger-conditioned injected memorization into model:
 
@@ -129,7 +129,7 @@ CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 --generated_inspected_dir $GENERATED_INSPECTED_DIR --trigger_conditioned
 ```
 
-## Running experiments on unprotected dataset
+## Running experiments on unprotected dataset.
 
 1. Get unprotected dataset:
 
