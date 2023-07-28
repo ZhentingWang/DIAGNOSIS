@@ -207,6 +207,10 @@ CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 --generated_inspected_dir $GENERATED_INSPECTED_DIR \ --trigger_conditioned 
 ```
 
+## Acknowledgement
+
+Part of the code is modifed based on https://github.com/huggingface/diffusers/tree/main/examples/text_to_image.
+
 
 ## Cite this work
 You are encouraged to cite the following paper if you use the repo for academic research.
