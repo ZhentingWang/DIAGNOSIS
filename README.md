@@ -1,5 +1,5 @@
 # DIAGNOSIS
-This repository is the source code for ["How to Detect Unauthorized Data Usages in Text-to-image Diffusion Models"](https://arxiv.org/abs/2307.03108).
+This repository is the source code for ["DIAGNOSIS: Detecting Unauthorized Data Usages in Text-to-image Diffusion Models" (ICLR 2024)]([https://openreview.net/pdf?id=f8S3aLm0Vp]).
 
 <!-- <div align="center">
 <img src=./image/intro.png width=75% />
@@ -216,10 +216,10 @@ Part of the code is modifed based on https://github.com/huggingface/diffusers/tr
 You are encouraged to cite the following paper if you use the repo for academic research.
 
 ```
-@article{wang2023detect,
-  title={How to Detect Unauthorized Data Usages in Text-to-image Diffusion Models},
-  author={Wang, Zhenting and Chen, Chen and Liu, Yuchen and Lyu, Lingjuan and Metaxas, Dimitris and Ma, Shiqing},
-  journal={arXiv preprint arXiv:2307.03108},
-  year={2023}
+@inproceedings{wang2024diagnosis,
+  title={DIAGNOSIS: Detecting Unauthorized Data Usages in Text-to-image Diffusion Models},
+  author={Wang, Zhenting and Chen, Chen and Lyu, Lingjuan and Metaxas, Dimitris and Ma, Shiqing},
+  booktitle={International Conference on Learning Representations},
+  year={2024}
 }
 ```
