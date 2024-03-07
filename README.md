@@ -66,7 +66,7 @@ python coating.py --p 0.0 --target_type none
 Train binary classifier and approximate the memorization strength
 
 ```bash
-export ORI_DIR="/pokemon-blip-captions_p0.0_none/train/" \
+export ORI_DIR="./pokemon-blip-captions_p0.0_none/train/" \
 export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128/train/" \
 export GENERATED_INSPECTED_DIR="./generated_imgs_pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128/ " \
 
@@ -128,7 +128,7 @@ python coating.py --p 0.0 --target_type none
 Train binary classifier and approximate the memorization strength
 
 ```bash
-export ORI_DIR="/pokemon-blip-captions_p0.0_none/train/" \
+export ORI_DIR="./pokemon-blip-captions_p0.0_none/train/" \
 export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s1.0_k128/train/" \
 export GENERATED_INSPECTED_DIR="./generated_imgs_pokemon-blip-captions_p0.2_wanet_s1.0_k128/ " \
 
@@ -190,7 +190,7 @@ python coating.py --p 0.0 --target_type none
 Train binary classifier and approximate the memorization strength
 
 ```bash
-export ORI_DIR="/pokemon-blip-captions_p0.0_none/train/" \
+export ORI_DIR="./pokemon-blip-captions_p0.0_none/train/" \
 export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s1.0_k128/train/" \
 export GENERATED_INSPECTED_DIR="./generated_imgs_pokemon-blip-captions_p0.0_none/ " \
 
@@ -214,7 +214,7 @@ python coating.py --p 0.0 --target_type none
 Train binary classifier and approximate the memorization strength
 
 ```bash
-export ORI_DIR="/pokemon-blip-captions_p0.0_none/train/" \
+export ORI_DIR="./pokemon-blip-captions_p0.0_none/train/" \
 export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128/train/" \
 export GENERATED_INSPECTED_DIR="./generated_imgs_pokemon-blip-captions_p0.0_none/"\
 
