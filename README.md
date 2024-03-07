@@ -53,7 +53,7 @@ CUDA_VISIBLE_DEVICES=0 python generate.py --model_path $MODEL_PATH --save_path  
 
 * Second, approximate the memorization strength and flag the malicious model:
   
-Construct Positive samples and negative samples for trining of the binary classifier 
+** Construct Positive samples and negative samples for trining of the binary classifier 
 
 ```bash
 python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 2 
@@ -63,7 +63,7 @@ python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 2
 python coating.py --p 0.0 --target_type none
 ```
 
-Train binary classifier and approximate the memorization strength
+** Train binary classifier and approximate the memorization strength
 
 ```bash
 export ORI_DIR="/pokemon-blip-captions_p0.0_none/train/" \
