@@ -53,7 +53,7 @@ CUDA_VISIBLE_DEVICES=0 python generate.py --model_path $MODEL_PATH --save_path  
 
 * Second, approximate the memorization strength and flag the malicious model:
   
-Construct positive samples and negative samples for trining of the binary classifier 
+Construct positive samples and negative samples for the training of the binary classifier 
 
 ```bash
 python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 2 
@@ -115,7 +115,7 @@ CUDA_VISIBLE_DEVICES=0 python generate.py --model_path $MODEL_PATH --save_path  
 
 * Second, approximate the memorization strength and flag the malicious model:
 
-Construct positive samples and negative samples for trining of the binary classifier 
+Construct positive samples and negative samples for the training of the binary classifier 
 
 ```bash
 python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 1 
@@ -177,7 +177,7 @@ CUDA_VISIBLE_DEVICES=0 python generate.py --model_path $MODEL_PATH --save_path  
 
 * Approximate the (unconditional) memorization strength and flag the malicious model:
 
-Construct positive samples and negative samples for trining of the binary classifier 
+Construct positive samples and negative samples for the training of the binary classifier 
 
 ```bash
 python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 1 
@@ -201,7 +201,7 @@ CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 
 * Approximate the (trigger-conditioned) memorization strength and flag the malicious model:
 
-Construct positive samples and negative samples for trining of the binary classifier 
+Construct positive samples and negative samples for the training of the binary classifier 
 
 ```bash
 python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 2 
