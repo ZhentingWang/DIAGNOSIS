@@ -187,6 +187,8 @@ python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 1
 python coating.py --p 0.0 --target_type none
 ```
 
+Train binary classifier and approximate the memorization strength
+
 ```bash
 export ORI_DIR="/pokemon-blip-captions_p0.0_none/train/" \
 export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s1.0_k128/train/" \
@@ -198,6 +200,8 @@ CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 ```
 
 * Approximate the (trigger-conditioned) memorization strength and flag the malicious model:
+
+Construct positive samples and negative samples for trining of the binary classifier 
 
 ```bash
 python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 2 
