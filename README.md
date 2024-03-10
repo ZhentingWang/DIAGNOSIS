@@ -232,10 +232,10 @@ Part of the code is modifed based on https://github.com/huggingface/diffusers/tr
 You are encouraged to cite the following paper if you use the repo for academic research.
 
 ```
-@inproceedings{wang2024diagnosis,
+@inproceedings{wang2023diagnosis,
   title={DIAGNOSIS: Detecting Unauthorized Data Usages in Text-to-image Diffusion Models},
-  author={Wang, Zhenting and Chen, Chen and Lyu, Lingjuan and Metaxas, Dimitris and Ma, Shiqing},
-  booktitle={International Conference on Learning Representations},
-  year={2024}
+  author={Wang, Zhenting and Chen, Chen and Lyu, Lingjuan and Metaxas, Dimitris N and Ma, Shiqing},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2023}
 }
 ```
