@@ -1,5 +1,5 @@
 # DIAGNOSIS
-This repository is the source code for ["DIAGNOSIS: Detecting Unauthorized Data Usages in Text-to-image Diffusion Models" (ICLR 2024)]([https://openreview.net/pdf?id=f8S3aLm0Vp]).
+This repository is the source code for ["DIAGNOSIS: Detecting Unauthorized Data Usages in Text-to-image Diffusion Models"]([https://openreview.net/pdf?id=f8S3aLm0Vp]) (ICLR 2024).
 
 <!-- <div align="center">
 <img src=./image/intro.png width=75% />
