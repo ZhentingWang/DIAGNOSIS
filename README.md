@@ -25,8 +25,8 @@ python coating.py --p 1.0 --target_type wanet --unconditional --wanet_s 2 --remo
 
 ```bash
 export MODEL_NAME="CompVis/stable-diffusion-v1-4" \
-export TRAIN_DATA_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128_removeeval/train/" \
-export OUTPUT_DIR="model_pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128" \
+export TRAIN_DATA_DIR="./traindata_p1.0_wanet_unconditional_s2.0_k128_removeeval/train/" \
+export OUTPUT_DIR="output_p1.0_wanet_unconditional_s2.0_k128" \
 
 CUDA_VISIBLE_DEVICES=0 accelerate launch --mixed_precision="fp16" train_text_to_image_lora.py \
 --pretrained_model_name_or_path=$MODEL_NAME \
@@ -45,8 +45,8 @@ CUDA_VISIBLE_DEVICES=0 accelerate launch --mixed_precision="fp16" train_text_to_
 * First, generate a set of samples using the inspected model:
 
 ```bash
-export MODEL_PATH="model_pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128" \
-export SAVE_PATH="./generated_imgs_pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128/" \
+export MODEL_PATH="output_p1.0_wanet_unconditional_s2.0_k128" \
+export SAVE_PATH="./generated_imgs_p1.0_wanet_unconditional_s2.0_k128/" \
 
 CUDA_VISIBLE_DEVICES=0 python generate.py --model_path $MODEL_PATH --save_path  $SAVE_PATH
 ```
@@ -66,9 +66,9 @@ python coating.py --p 0.0 --target_type none
 Train binary classifier and approximate the memorization strength
 
 ```bash
-export ORI_DIR="./pokemon-blip-captions_p0.0_none/train/" \
-export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128/train/" \
-export GENERATED_INSPECTED_DIR="./generated_imgs_pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128/ " \
+export ORI_DIR="./traindata_p0.0_none/train/" \
+export COATED_DIR="./traindata_p1.0_wanet_unconditional_s2.0_k128/train/" \
+export GENERATED_INSPECTED_DIR="./generated_imgs_p1.0_wanet_unconditional_s2.0_k128/ " \
 
 CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 --coated_dir $COATED_DIR \
@@ -87,8 +87,8 @@ python coating.py --p 0.2 --target_type wanet --wanet_s 1 --remove_eval
 
 ```bash
 export MODEL_NAME="CompVis/stable-diffusion-v1-4" \
-export TRAIN_DATA_DIR="./pokemon-blip-captions_p0.2_wanet_s1.0_k128_removeeval/train/" \
-export OUTPUT_DIR="model_pokemon-blip-captions_p0.2_wanet_s1.0_k128" \
+export TRAIN_DATA_DIR="./traindata_p0.2_wanet_s1.0_k128_removeeval/train/" \
+export OUTPUT_DIR="output_p0.2_wanet_s1.0_k128" \
 
 CUDA_VISIBLE_DEVICES=0 accelerate launch --mixed_precision="fp16" train_text_to_image_lora.py \
 --pretrained_model_name_or_path=$MODEL_NAME \
@@ -107,8 +107,8 @@ CUDA_VISIBLE_DEVICES=0 accelerate launch --mixed_precision="fp16" train_text_to_
 * First, generate a set of samples using the inspected model:
 
 ```bash
-export MODEL_PATH="model_pokemon-blip-captions_p0.2_wanet_s1.0_k128" \
-export SAVE_PATH="./generated_imgs_pokemon-blip-captions_p0.2_wanet_s1.0_k128/" \
+export MODEL_PATH="output_p0.2_wanet_s1.0_k128" \
+export SAVE_PATH="./generated_imgs_p0.2_wanet_s1.0_k128/" \
 
 CUDA_VISIBLE_DEVICES=0 python generate.py --model_path $MODEL_PATH --save_path  $SAVE_PATH
 ```
@@ -128,9 +128,9 @@ python coating.py --p 0.0 --target_type none
 Train binary classifier and approximate the memorization strength
 
 ```bash
-export ORI_DIR="./pokemon-blip-captions_p0.0_none/train/" \
-export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s1.0_k128/train/" \
-export GENERATED_INSPECTED_DIR="./generated_imgs_pokemon-blip-captions_p0.2_wanet_s1.0_k128/ " \
+export ORI_DIR="./traindata_p0.0_none/train/" \
+export COATED_DIR="./traindata_p1.0_wanet_unconditional_s1.0_k128/train/" \
+export GENERATED_INSPECTED_DIR="./generated_imgs_p0.2_wanet_s1.0_k128/ " \
 
 CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 --coated_dir $COATED_DIR \
@@ -149,8 +149,8 @@ python coating.py --p 0.0 --target_type none --remove_eval
 
 ```bash
 export MODEL_NAME="CompVis/stable-diffusion-v1-4" \
-export TRAIN_DATA_DIR="./pokemon-blip-captions_p0.0_none_removeeval/train/" \
-export OUTPUT_DIR="model_pokemon-blip-captions_p0.0_none" \
+export TRAIN_DATA_DIR="./traindata_p0.0_none_removeeval/train/" \
+export OUTPUT_DIR="output_p0.0_none" \
 
 CUDA_VISIBLE_DEVICES=0 accelerate launch --mixed_precision="fp16" train_text_to_image_lora.py \
 --pretrained_model_name_or_path=$MODEL_NAME \
@@ -169,8 +169,8 @@ CUDA_VISIBLE_DEVICES=0 accelerate launch --mixed_precision="fp16" train_text_to_
 * First, generate a set of samples using the inspected model:
 
 ```bash
-export MODEL_PATH="model_pokemon-blip-captions_p0.0_none" \
-export SAVE_PATH="./generated_imgs_pokemon-blip-captions_p0.0_none/" \
+export MODEL_PATH="output_p0.0_none" \
+export SAVE_PATH="./generated_imgs_p0.0_none/" \
 
 CUDA_VISIBLE_DEVICES=0 python generate.py --model_path $MODEL_PATH --save_path  $SAVE_PATH
 ```
@@ -190,9 +190,9 @@ python coating.py --p 0.0 --target_type none
 Train binary classifier and approximate the memorization strength
 
 ```bash
-export ORI_DIR="./pokemon-blip-captions_p0.0_none/train/" \
-export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s1.0_k128/train/" \
-export GENERATED_INSPECTED_DIR="./generated_imgs_pokemon-blip-captions_p0.0_none/ " \
+export ORI_DIR="./traindata_p0.0_none/train/" \
+export COATED_DIR="./traindata_p1.0_wanet_unconditional_s1.0_k128/train/" \
+export GENERATED_INSPECTED_DIR="./generated_imgs_p0.0_none/ " \
 
 CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 --coated_dir $COATED_DIR \
@@ -214,9 +214,9 @@ python coating.py --p 0.0 --target_type none
 Train binary classifier and approximate the memorization strength
 
 ```bash
-export ORI_DIR="./pokemon-blip-captions_p0.0_none/train/" \
-export COATED_DIR="./pokemon-blip-captions_p1.0_wanet_unconditional_s2.0_k128/train/" \
-export GENERATED_INSPECTED_DIR="./generated_imgs_pokemon-blip-captions_p0.0_none/"\
+export ORI_DIR="./traindata_p0.0_none/train/" \
+export COATED_DIR="./traindata_p1.0_wanet_unconditional_s2.0_k128/train/" \
+export GENERATED_INSPECTED_DIR="./generated_imgs_p0.0_none/"\
 
 CUDA_VISIBLE_DEVICES=0 python binary_classifier.py --ori_dir $ORI_DIR \
 --coated_dir $COATED_DIR \
