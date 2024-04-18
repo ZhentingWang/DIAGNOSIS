@@ -13,7 +13,9 @@ import torch.nn.functional as F
 import torchvision.transforms as transforms
 font_path = os.path.join(cv2.__path__[0],'qt','fonts','DejaVuSans.ttf')
 
-dataset_name = "lambdalabs/pokemon-blip-captions"
+#The Pokemon dataset has been removed from the Hugging Face platform due to copyright concerns.
+#dataset_name = "lambdalabs/pokemon-blip-captions"
+dataset_name = "irodkin/celeba_with_llava_captions"
 dataset_config_name = None
 cache_dir = None
 
@@ -58,7 +60,7 @@ dataset = load_dataset(
 import random
 import os
 
-path = './pokemon-blip-captions_p'+str(p)+"_"+str(args.target_type)
+path = './traindata_p'+str(p)+"_"+str(args.target_type)
 if args.unconditional:
     path = path + "_unconditional"
 if args.target_type=="wanet":
